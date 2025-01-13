@@ -47,10 +47,10 @@ with tab_mkt_data:
     df.columns = ['Close','High','Low','Open','Volume']
     st.write(df)
     st.write(df.columns)
-    st.line_chart(data = df,x ='Date',y=y_list)
+    st.line_chart(data = df,y=y_list)
     
     if cb_volume:
-        st.bar_chart(data=df,x='Date',y='Volume')
+        st.bar_chart(data=df,y='Volume')
 
 
 with tab_instit:
