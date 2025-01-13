@@ -45,8 +45,6 @@ with tab_mkt_data:
     df = yf.download(box,period=dd_box)
     #df.reset_index(inplace=True)
     df.columns = ['Close','High','Low','Open','Volume']
-    st.write(df)
-    st.write(df.columns)
     st.line_chart(data = df,y=y_list)
     
     if cb_volume:
