@@ -43,7 +43,8 @@ with tab_mkt_data:
     
     df = yf.download(box,period=dd_box)
     df.reset_index(inplace=True)
-    st.line_chart(data = df,x ='Date',y=y_list)
+    st.write(df)
+    #st.line_chart(data = df,x ='Date',y=y_list)
     
     if cb_volume:
         st.bar_chart(data=df,x='Date',y='Volume')
