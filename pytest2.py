@@ -5,7 +5,7 @@ import yfinance as yf
 
 df_columns = []
 y_list = []
-per_list = ['ytd','1mo','3mo','6mo','1y','2y','5y','10y','max']
+per_list = ['1y','1mo','3mo','6mo','2y','5y','10y','ytd','max']
 df = pd.DataFrame()
 
 st.write("Enter a stock ticker to learn more about a company!")
