@@ -45,10 +45,10 @@ with tab_mkt_data:
     #df.reset_index(inplace=True)
     st.write(df)
     st.write(df.columns)
-    #st.line_chart(data = df,x ='Date',y=y_list)
+    st.line_chart(data = df,x ='Date',y=y_list)
     
-    #if cb_volume:
-        #st.bar_chart(data=df,x='Date',y='Volume')
+    if cb_volume:
+        st.bar_chart(data=df,x='Date',y='Volume')
 
 
 with tab_instit:
