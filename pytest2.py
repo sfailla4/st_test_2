@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import yfinance as yf
 
+df_columns = []
 y_list = []
 per_list = ['ytd','1mo','3mo','6mo','1y','2y','5y','10y','max']
 df = pd.DataFrame()
@@ -43,6 +44,7 @@ with tab_mkt_data:
     
     df = yf.download(box,period=dd_box)
     #df.reset_index(inplace=True)
+    df.columns = ['Close','Open','High','Low','Adjusted','Volume']
     st.write(df)
     st.write(df.columns)
     st.line_chart(data = df,x ='Date',y=y_list)
